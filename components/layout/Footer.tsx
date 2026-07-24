@@ -19,7 +19,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-grey">
-              Premium online body transformation coaching — personalized, science-based, and built around you.
+              Premium online body transformation coaching personalized, science-based, and built around you.
             </p>
             <div className="mt-6 flex items-center gap-3">
               <a

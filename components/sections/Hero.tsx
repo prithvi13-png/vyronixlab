@@ -54,7 +54,7 @@ export default function Hero() {
           className="mx-auto mt-8 max-w-2xl text-balance text-base leading-relaxed text-grey sm:text-lg"
         >
           Stop guessing. Start understanding. Personalized nutrition, customized workouts, and daily
-          accountability — built around you.
+          accountability built around you.
         </motion.p>
 
         <motion.div
