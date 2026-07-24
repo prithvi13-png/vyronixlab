@@ -55,7 +55,7 @@ export const whyChooseUs: FeatureCard[] = [
   {
     icon: Salad,
     title: "Personalized Diet & Workout",
-    description: "Built around your body, schedule, and goals — not a generic template.",
+    description: "Built around your body, schedule, and goals not a generic template.",
   },
   {
     icon: MessageCircle,
@@ -131,7 +131,7 @@ export const faqItems: FAQItem[] = [
   {
     question: "Can beginners and women join?",
     answer:
-      "Yes. VYRONIX LAB is built for every level and for both men and women, across all transformation goals — your plan is designed around where you are today.",
+      "Yes. VYRONIX LAB is built for every level and for both men and women, across all transformation goals your plan is designed around where you are today.",
   },
   {
     question: "Do I need supplements?",
@@ -141,6 +141,6 @@ export const faqItems: FAQItem[] = [
   {
     question: "How long does transformation take?",
     answer:
-      "Most transformations take 3–6 months. Our programs cover the first 3 months — you can simply renew to continue.",
+      "Most transformations take 3–6 months. Our programs cover the first 3 months you can simply renew to continue.",
   },
 ];
