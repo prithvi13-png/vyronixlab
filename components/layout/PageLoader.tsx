@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { getLenisInstance } from "@/lib/lenis";
 
 export default function PageLoader() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    getLenisInstance()?.stop();
     const interval = setInterval(() => {
       setProgress((prev) => {
         const next = prev + Math.random() * 18 + 6;
@@ -28,7 +29,7 @@ export default function PageLoader() {
     if (progress >= 100) {
       const timeout = setTimeout(() => {
         setLoading(false);
-        document.body.style.overflow = "";
+        getLenisInstance()?.start();
       }, 500);
       return () => clearTimeout(timeout);
     }

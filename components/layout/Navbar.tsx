@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/site-config";
 import MagneticButton from "@/components/ui/MagneticButton";
 import { cn } from "@/lib/utils";
+import { getLenisInstance } from "@/lib/lenis";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,7 +21,11 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (open) {
+      getLenisInstance()?.stop();
+    } else {
+      getLenisInstance()?.start();
+    }
   }, [open]);
 
   return (

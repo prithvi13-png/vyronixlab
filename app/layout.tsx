@@ -102,11 +102,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <PageLoader />
-        <CursorGlow />
-        <div className="grain" />
-        <SmoothScroll>{children}</SmoothScroll>
-        <WhatsAppButton />
+        <SmoothScroll>
+          <PageLoader />
+          <CursorGlow />
+          <div className="grain" />
+          {children}
+          <WhatsAppButton />
+        </SmoothScroll>
       </body>
     </html>
   );

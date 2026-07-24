@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Lenis from "lenis";
+import { setLenisInstance } from "@/lib/lenis";
 
 export function useLenis() {
   useEffect(() => {
@@ -11,6 +12,7 @@ export function useLenis() {
       smoothWheel: true,
       touchMultiplier: 1.5,
     });
+    setLenisInstance(lenis);
 
     let rafId: number;
     function raf(time: number) {
@@ -21,6 +23,7 @@ export function useLenis() {
 
     return () => {
       cancelAnimationFrame(rafId);
+      setLenisInstance(null);
       lenis.destroy();
     };
   }, []);
