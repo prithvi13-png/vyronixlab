@@ -28,7 +28,7 @@ export default function About() {
               eyebrow="Our Philosophy"
               align="left"
               title="We Don't Just Coach. We Educate."
-              description="Complete education, accountability, and transformation — built around your body, not a template."
+              description="Complete education, accountability, and transformation built around your body, not a template."
             />
           </div>
 
