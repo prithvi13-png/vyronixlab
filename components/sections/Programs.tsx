@@ -90,7 +90,7 @@ export default function Programs() {
         >
           <p className="text-sm leading-relaxed text-grey">
             Real transformation takes <span className="text-offwhite">3–6 months</span>. Both plans cover
-            3 months of coaching —{" "}
+            3 months of coaching {" "}
             <span className="text-gold-gradient font-medium">renew anytime</span> to keep going.
           </p>
         </motion.div>
