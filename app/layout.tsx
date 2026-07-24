@@ -105,7 +105,7 @@ export default function RootLayout({
         <SmoothScroll>
           <PageLoader />
           <CursorGlow />
-          <div className="grain" />
+          <div className="grain hidden md:block" />
           {children}
           <WhatsAppButton />
         </SmoothScroll>

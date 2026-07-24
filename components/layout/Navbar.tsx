@@ -7,7 +7,7 @@ import { Menu, X } from "lucide-react";
 import { navLinks, siteConfig } from "@/lib/site-config";
 import MagneticButton from "@/components/ui/MagneticButton";
 import { cn } from "@/lib/utils";
-import { getLenisInstance } from "@/lib/lenis";
+import { lockScroll, unlockScroll } from "@/lib/lenis";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,9 +22,9 @@ export default function Navbar() {
 
   useEffect(() => {
     if (open) {
-      getLenisInstance()?.stop();
+      lockScroll();
     } else {
-      getLenisInstance()?.start();
+      unlockScroll();
     }
   }, [open]);
 

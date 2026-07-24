@@ -16,7 +16,9 @@ export default function GoldParticles({ count = 40 }: { count?: number }) {
   const [particles, setParticles] = useState<Particle[]>([]);
 
   useEffect(() => {
-    const generated = Array.from({ length: count }, (_, i) => ({
+    const isTouch = window.matchMedia("(pointer: coarse)").matches;
+    const effectiveCount = isTouch ? Math.round(count * 0.4) : count;
+    const generated = Array.from({ length: effectiveCount }, (_, i) => ({
       id: i,
       size: Math.random() * 3 + 1,
       left: Math.random() * 100,
